@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+<div class="container" style="width: 40%; margin: 25px auto;">
+	<form action="/add_college" method="post">
+		<div class="form-group">
+			<label>College Name:</label>
+			<input class="form-control" type="text" placeholder="College Name" name="cname">
+		</div>
+		<div class="form-group">
+			<label>Location:</label>
+			<input class="form-control" type="text" placeholder="Location" name="location">
+		</div>
+		<div class="form-group">
+			<label>Course:</label>
+			<input class="form-control" type="text" placeholder="Course" name="course">
+		</div>
+
+		<div class="form-group">
+			<label>Designation:</label>
+			<input class="form-control" type="text" name="designation" placeholder="Designation">
+		</div>
+		<div class="form-group">
+			<label>About:</label>
+			<textarea class="form-control" id="exampleFormControlTextarea3" rows="7" name="about" placeholder="Write something about your college."></textarea>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-lg btn-primary btn-block">Submit</button>
+		</div>
+	</div>
+			<% include ./partials/footer %>

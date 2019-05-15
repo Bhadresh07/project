@@ -1,0 +1,44 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2>College Reviewer</h2>
+<ul>
+  <li><a href="/home">Home</a></li>
+  <li><a href="/college">Colleges</a></li>
+  <li><a href="/review">Reviews</a></li>
+  <ul>
+      <% if(!currentUser){ %>
+          <li><a href="/signup">Sign Up</a></li>
+          <li><a href="/login">Login</a></li>
+      <% } else { %>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/write_review">Write a review</a></li>
+          <li><a href="/add_college">Add college</a></li>
+          <li><a href="#">Signed In As <%= currentUser.name %></a></li>
+          <li><a href="/profile">MyProfile</a></li>
+          <li><a href="/logout">Logout</a></li>
+      <% } %>
+  </ul>
+</ul>
+<br><br>
+<center>
+  <div class="alert">
+     <% if(error && error.length > 0) { %>
+       <div class="alert alert-danger"><p><%=error %></p></div>
+     <% } %>
+
+     <% if(success && success.length > 0) { %>
+       <div class="alert alert-success"><p><%= success %></p></div>
+     <% } %>
+     <% if(error_msg && error_msg.length > 0) { %>
+       <div class="alert alert-danger"><p><%=error_msg %></p></div>
+     <% } %>
+
+     <% if(success_msg && success_msg.length > 0) { %>
+       <div class="alert alert-success"><p><%= success_msg %></p></div>
+     <% } %>
+  </div>
+</center>

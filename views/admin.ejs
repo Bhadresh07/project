@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+<% let f=0 %>
+<% for(let i = add.length-1; i >=0 ; i--) { %>
+ <%if(!add[i].validity){ f=1%>
+ <div class="container">
+ <%=add[i].cname%><br/>
+ <%=add[i].about%><br/>
+ <a href="/accept/<%=add[i].cname%>"><button class="btn btn-default">accept</button></a>
+ <a href="/reject/<%=add[i].cname%>"><button class="btn btn-default">reject</button></a><br>
+ </div>
+ 	<% } %>
+  <% } %>
+  <%if(f==0){%>
+    <div class="container">
+    <h6>No requests yet!</h6>
+    </div>
+  <% } %>
+<% include ./partials/footer %>

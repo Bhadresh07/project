@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+<div class="container" style="width: 40%; margin: 25px auto;">
+	<form action="/write_review" method="post">
+		<div class="form-group">
+			<label>Batch:</label>
+			<input class="form-control" type="number" min="2008" max="2019" placeholder="Batch" name="batch">
+		</div>
+		<div class="form-group">
+			<label>Rating:</label>
+			<input class="form-control" type="number" min="0" max="5" step="0.5" placeholder="Rating" name="rating">
+		</div>
+
+		<div class="form-group">
+			<label>Title of Review:</label>
+			<input class="form-control" type="text" name="title" placeholder="Title of Review">
+		</div>
+		<div class="form-group">
+			<label>Review:</label>
+			<textarea class="form-control" id="exampleFormControlTextarea3" rows="7" name="review"></textarea>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-lg btn-primary btn-block">Submit</button>
+		</div>
+	</div>
+			<% include ./partials/footer %>

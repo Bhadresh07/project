@@ -1,0 +1,15 @@
+<% include ./partials/header %>
+<div class="container">
+	<% for(let i = colleges.length-1; i >=0 ; i--) { %>
+  <div class="re">
+		<article>
+			<%if(colleges[i].validity===true){%>
+			<h2><strong>
+			<%=colleges[i].cname%>,<%=colleges[i].location%></strong></h2><a href="/review/<%=colleges[i].cname%>"><button class="btn btn-default">review it</button></a>
+			<%}%>
+		</article>
+	</div>
+	<% } %>
+</div>
+</center>
+<% include ./partials/footer %>
